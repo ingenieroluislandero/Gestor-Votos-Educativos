@@ -24,7 +24,13 @@ app
 //middlewares
 //gloval variables
 //routes
+app
+	.use(require('./routes'))
+	.use(require('./routes/votar'))
+	.use(require('./routes/admi'))
 //static files
+app	
+	.use(express.static(path.join(__dirname, 'public')))
 //server is listening
 app.listen(app.get('port'), () => {
   console.log('Server on port', app.get('port'))
