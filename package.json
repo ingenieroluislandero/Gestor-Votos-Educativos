@@ -4,8 +4,7 @@
   "description": "gestor de votos para estudiantes",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon src/",
-    "start": "node src/index"
+    "dev": "nodemon src/"
   },
   "keywords": [
     "CRUD",

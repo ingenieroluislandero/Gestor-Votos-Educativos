@@ -2,8 +2,8 @@ const express = require('express'),
 	router = express.Router()
 
 router
-	.get('./',(req, res)=>{
-		res.send('hola mundo')
+	.get('/admi',(req, res)=>{
+		res.send('soy el administrador')
 	})
 
 module.exports = router

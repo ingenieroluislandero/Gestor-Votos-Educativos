@@ -6,7 +6,7 @@ router.get('/', (req, res) => {
 })
 
 router.get('/about', (req, res) => {
-  res.send('hola')
+  res.send('acerca de mi sitio web')
 })
 
 module.exports = router

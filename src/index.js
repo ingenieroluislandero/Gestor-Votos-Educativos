@@ -22,6 +22,17 @@ app
 		}))
 	.set('view engine', '.hbs')
 //middlewares
+app.
+	.use(express.urlencoded({extended: false}))
+	.use(methodOverride('_method'))
+	.use(session({
+		secret: 'secrect',
+		resave: true,
+		saveUninitialized: true
+	}))
+	.use(passport.initialize())
+	.use(passport.session())
+	.use(flash())
 //gloval variables
 //routes
 app
