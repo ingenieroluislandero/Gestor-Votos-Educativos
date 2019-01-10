@@ -22,7 +22,7 @@ app
 		}))
 	.set('view engine', '.hbs')
 //middlewares
-app.
+app
 	.use(express.urlencoded({extended: false}))
 	.use(methodOverride('_method'))
 	.use(session({

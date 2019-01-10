@@ -2,11 +2,11 @@ const express = require('express'),
 	 router = express.Router()
 
 router.get('/', (req, res) => {
-  res.send('hola')
+  res.render('index')
 })
 
-router.get('/about', (req, res) => {
-  res.send('acerca de mi sitio web')
+router.get('/acerca', (req, res) => {
+  res.render('acerca')
 })
 
 module.exports = router
