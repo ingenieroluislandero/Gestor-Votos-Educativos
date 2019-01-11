@@ -1,3 +1,35 @@
-<div>
-	<h1>hola</h1>
-</div>
+<nav>
+	<div>
+		<a href="/">Inicio de App</a>
+		<div>
+			<ul>
+				<li>
+					<a href="/">Home <span>(current)</span> </a>
+				</li>
+				<li>
+					<a href="/acerca">Acerca</a>
+				</li>
+			</ul>
+			<ul>
+				{{#if admi}}
+				<li>
+					<a href="#">Eventos</a>
+					<div>
+						<a href="/vistaAdmi/consulta">Ver candidatos</a>
+						<a href="/vistaAdmi/agregar">Agregar Candidatos</a>
+						<a href="/vistaAdmi/logout">salir</a>
+					</div>
+				</li>
+				{{else}}
+				<li>
+					<a href="/admi/admin">Entrar</a>
+				</li>
+				<li>
+					<a href="/admi/admreg">Registrarse</a>
+				</li>
+				{{/if}}
+			</ul>
+		</div>
+	</div>
+
+</nav>

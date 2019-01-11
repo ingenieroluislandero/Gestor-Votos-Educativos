@@ -8,5 +8,6 @@ router
 	.get('/vistaAdmi/welcome', (req, res)=>{
 		res.render('vistaAdmi/welcome')
 	})
+	
 
 module.exports = router
