@@ -1,10 +1,9 @@
-const mongoose = require('mongoose')
+const mongoose = require('mongoose');
 
-mongoose.set('useFindAndModify', false)
+mongoose.set('useFindAndModify', false);
 mongoose.connect('mongodb://localhost/gestorVotos', {
-	useCreateIndex: true,
-	useNewUrlParser:true
+  useCreateIndex: true,
+  useNewUrlParser: true
 })
-
-	.then(db => console.log('DB is connected'))
-	.catch(err => console.error(err))
+  .then(db => console.log('DB is connected'))
+  .catch(err => console.error(err));
