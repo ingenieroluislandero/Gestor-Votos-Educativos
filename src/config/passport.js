@@ -2,21 +2,21 @@ const passport = require('passport'),
    LocalStrategy = require('passport-local').Strategy,
 
    mongoose = require('mongoose'),
-   User = require('../models/Admin') 
+   Admi = require('../models/Admin') 
 
 
 passport.use(new LocalStrategy({
   usernameField: 'gmail'
 }, async (gmail, password, done) => {
   // Match Email's User
-  const user = await User.findOne({gmail: gmail});
-  if (!user) {
+  const admi = await Admi.findOne({gmail: gmail});
+  if (!admi) {
     return done(null, false, { message: 'pagina no encontrada.' });
   } else {
     // Match Password's User
-    const match = await user.matchPassword(password);
+    const match = await admi.matchPassword(password);
     if(match) {
-      return done(null, user);
+      return done(null, admi);
     } else {
       return done(null, false, { message: 'contaceña incorrecta.' });
     }
@@ -24,12 +24,12 @@ passport.use(new LocalStrategy({
 
 }));
 
-passport.serializeUser((user, done) => {
-  done(null, user.id);
+passport.serializeUser((admi, done) => {
+  done(null, admi.id);
 });
 
 passport.deserializeUser((id, done) => {
-  User.findById(id, (err, user) => {
-    done(err, user);
+  Admi.findById(id, (err, admi) => {
+    done(err, admi);
   });
 });
