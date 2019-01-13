@@ -1,0 +1,27 @@
+<div>
+	{{#each candi}}
+	<div>
+		<div>
+			<h4>{{lema}} <a href="/vistaAdmi/editar/{{_id}}">editar</a></h4>
+		</div>
+		<div>
+			<h2>{{nombre}} {{apellido}}</h2>
+		</div>
+		<h3>Grado: {{grado}} ª {{curso}}</h3>
+		
+	</div>
+	<form action="/vistaAdmi/delete/{{_id}}?_method=DELETE" method="POST">
+		<input type="hidden" name="_method" value="DELETE">
+		<button type="submit">Eliminar</button>
+	</form>
+	{{else}}
+	<div>
+		<div>
+			<h2>Hola {{user.name}}</h2>
+			<p>No hay candidatos creados</p>
+			<a href="/vistaAdmi/add">Desea crear uno</a>
+		</div>
+	</div>
+	{{/each}}
+
+</div>

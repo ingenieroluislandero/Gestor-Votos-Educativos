@@ -50,8 +50,8 @@ router
 
 	.get('/admi/logout', (req, res) => {
   		req.logout();
-  		req.flash('success_msg', 'You are logged out now.');
-  		res.redirect('/users/signin');
+  		req.flash('success_msg', 'Usted no esta Registrado.');
+  		res.redirect('/admi/admreg');
 	});
 
 module.exports = router

@@ -1,0 +1,32 @@
+{{#each errors}}
+<div>
+	<h2>{{text}}</h2>
+	
+</div>
+{{/each}}
+
+<div>
+	<div>
+		<h3>Editar Candidato</h3>
+	</div>
+	<div>
+		<form action="/vistaAdmi/editarC/{{candi._id}}?_method=PUT" method="POST">
+			<input type="hidden" name="_methon" value="PUT">
+			<div>
+				Nombre: <input type="text" name="nombre" value="{{candi.nombre}}">
+				Apellido: <input type="text" name="apellido" value="{{candi.apellido}}">
+			</div>
+			<div>
+				Grado:<input type="text" name="grado" value="{{candi.grado}}">
+				Curso:<input type="text" name="curso" value="{{candi.curso}}">
+			</div>
+			<div>
+				Lema: <input type="text" name="lema" value="{{candi.lema}}">
+			</div>
+			<button type="submit">
+				Actualizar
+			</button>
+			
+		</form>
+	</div>
+</div>
