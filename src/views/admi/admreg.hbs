@@ -1,24 +1,30 @@
-<div>
-	<div>
-		<h1>Registrar Usuario Administrador</h1>
+<div class="row">
+	<div class="col-md-4 mx-auto">
+		<div class="card">
+			<div class="card-header">
+				<h1>Registrar Usuario Administrador</h1>
+			</div>
 		<div>
+		<div class="card-body">
 			<form action="/admi/admreg" method="POST">
-				<div>
-					<input type="text" name="nombre" placeholder="nombre" value={{name}}>
+				<div class="form-group">
+					<input type="text" class="form-control" name="nombre" placeholder="nombre" value={{name}}>
 				</div>
-				<div>
-					<input type="gmail" name="gmail" placeholder="gmail" value={{gmail}}>
+				<div class="form-group">
+					<input type="gmail" class="form-control" name="gmail" placeholder="gmail" value={{gmail}}>
 				</div>
-				<div>
-					<input type="password" name="password" placeholder="password" value={{password}}>
+				<div class="form-group">
+					<input type="password" class="form-control" name="password" placeholder="password" value={{password}}>
 				</div>
-				<div>
-					<input type="password" name="confir_password" placeholder="cofirmar password" value={{password}}>
+				<div class="form-group">
+					<input type="password" class="form-control" name="confir_password" placeholder="cofirmar password" value={{password}}>
 				</div>
-				<button>
+				<button class="btn btn-primary btn-block">
 					Registrarse
 				</button>
 			</form>
+		</div>
+		</div>
 		</div>
 	</div>
 </div>

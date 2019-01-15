@@ -1,16 +1,25 @@
-<div>
-	<div>
-		<h1>Entrada al sistema</h1>
-		<form  action="/admi/admin" method="POST" >
-			<div>
-				<input type="gmail" name="gmail" placeholder="escribir gmail">
+<div class="row">
+	<div class="col-md-4 mx-auto">
+		<div class="card mt-4 text-center">
+			<div class="card-header">
+				<h1 class="h4">Entrada al sistema</h1>
 			</div>
 			<div>
-				<input type="password" name="password" placeholder="escribir password">
+				<img class="rounded-circle mx-auto d-block logo m-4" src="" alt="logo">
 			</div>
-			<button>
+			<div class="card-body">
+			<form  action="/admi/admin" method="POST" >
+				<div class="form-group">
+				<input type="gmail" class="form-control" name="gmail" placeholder="escribir gmail">
+				</div>
+				<div class="form-group">
+				<input type="password" class="form-control" name="password" placeholder="escribir password">
+				</div>
+				<button class="btn btn-primary btn-block">
 				Entrar
-			</button>
-		</form>
+				</button>
+			</form>
+			</div>
+		</div>
 	</div>
 </div>
