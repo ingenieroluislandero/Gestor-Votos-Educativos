@@ -4,6 +4,18 @@ const express = require('express'),
 	 {isAuthenticated} = require('../helpers/auth')
 
 router
+	.get('/vistaAdmi/votaciones', isAuthenticated, async (req, res)=>{
+		const candi = await Cand.find({admi: req.user.id}).sort({date: 'desc'})
+		res.render('vistaAdmi/votar', {candi})
+	})
+	.put('/vistaAdmi/votoR/:id', isAuthenticated, async (req, res) =>{
+		const {nombre, apellido, grado, curso, lema, votos} = req.body
+		const candi = await Cand.findByIdAndUpdate(req.params.id, {})
+		
+		
+		req.flash('success_msg', 'Voto realizado con exito')
+		res.redirect('/vistaAdmi/votaciones')
+	})
 	.get('/vistaAdmi/add',isAuthenticated, (req, res)=>{
 		res.render('vistaAdmi/agregar')
 	})
